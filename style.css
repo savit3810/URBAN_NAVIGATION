@@ -1,0 +1,183 @@
+/* Main Styles for Urban Navigation App */
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #f8f9fa;
+}
+
+.navbar {
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+/* Map Containers */
+#map, #traffic-map {
+  height: 500px;
+  width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+/* Input Fields */
+.location-input {
+  margin-bottom: 15px;
+}
+
+/* Travel Mode Buttons */
+.travel-mode {
+  cursor: pointer;
+  transition: all 0.2s;
+  border-radius: 8px;
+  padding: 10px;
+  margin: 5px;
+  background-color: #f8f9fa;
+  border: 1px solid #dee2e6;
+}
+
+.travel-mode:hover {
+  background-color: #e9ecef;
+}
+
+.travel-mode.active {
+  background-color: #0d6efd;
+  color: white;
+  border-color: #0d6efd;
+}
+
+/* Routes Sidebar */
+.routes-sidebar {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  padding: 15px;
+  max-height: 500px;
+  overflow-y: auto;
+}
+
+.route-option {
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  border: 1px solid #dee2e6;
+  transition: all 0.2s;
+}
+
+.route-option:hover {
+  background-color: #f8f9fa;
+}
+
+.route-option.active {
+  border-color: #0d6efd;
+  background-color: rgba(13, 110, 253, 0.05);
+}
+
+/* Traffic Analysis */
+.traffic-analysis {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  padding: 15px;
+  margin-top: 20px;
+}
+
+.traffic-legend {
+  display: flex;
+  justify-content: space-around;
+  margin: 15px 0;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+}
+
+.legend-color {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  margin-right: 5px;
+}
+
+.high-traffic {
+  background-color: #dc3545;
+}
+
+.medium-traffic {
+  background-color: #ffc107;
+}
+
+.low-traffic {
+  background-color: #28a745;
+}
+
+/* Vehicle Distribution */
+.vehicle-distribution {
+  margin-top: 20px;
+}
+
+.progress {
+  height: 10px;
+  margin-bottom: 10px;
+}
+
+/* Feedback Modal */
+.rating-container {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.rating-star {
+  font-size: 2rem;
+  color: #ffc107;
+  cursor: pointer;
+  margin: 0 5px;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  #map, #traffic-map {
+    height: 350px;
+  }
+  
+  .routes-sidebar {
+    margin-top: 20px;
+    max-height: 350px;
+  }
+}
+
+/* Page Transitions */
+.page {
+  display: none;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+#home {
+  display: block;
+}
+
+/* Additional UI Elements */
+.card {
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  margin-bottom: 20px;
+}
+
+.card-header {
+  background-color: rgba(13, 110, 253, 0.1);
+  font-weight: 500;
+}
+
+.btn-primary {
+  background-color: #0d6efd;
+  border-color: #0d6efd;
+}
+
+.btn-primary:hover {
+  background-color: #0b5ed7;
+  border-color: #0a58ca;
+}
